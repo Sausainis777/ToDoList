@@ -8,13 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 
-    private final static String BASE_URL = ("https://www.webdriveruniversity.com/To-Do-List/index.html");
+    private final static String BASE_URL = ("https://www.webdriveruniversity.com/Actions/index.html");
     public WebDriver driver;
 
     @BeforeEach
     public void init() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(BASE_URL);
     }
 
